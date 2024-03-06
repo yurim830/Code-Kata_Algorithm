@@ -1,10 +1,10 @@
 import Foundation
 
 func solution(_ left:Int, _ right:Int) -> Int {
-var result: Int = 0
+    var result: Int = 0
     
-    for num in (left...right) {
-        result += Array(1...num).filter({num % $0 == 0}).count % 2 == 0 ? num : -num
+    for num in (left...right){
+        result += floor(sqrt(Double(num))) == sqrt(Double(num)) ? -num : num
     }
     return result
 }
