@@ -1,10 +1,8 @@
 func solution(_ s:String) -> Bool {
-    guard s.count == 4 || s.count == 6 else { 
-        return false
-    }
-    
-    if let sInt = Int(String(s)) {
+    if s.count == 4 || s.count == 6 {
+        if let sInt = Int(String(s)) {
         return true
+        }
     }
     return false 
 }
