@@ -12,12 +12,12 @@ func solution(_ s:String) -> Int {
 }
 
 func execute(_ leftString: inout [Character]) {
-    let startS = leftString.removeFirst()
+    let x = leftString.removeFirst()
     var same: Int = 1
     var diff: Int = 0
     while leftString != [] {
         let target = leftString.removeFirst()
-        if startS == target {
+        if x == target {
             same += 1
         } else {
             diff += 1
