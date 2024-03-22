@@ -1,7 +1,7 @@
 func solution(_ strings:[String], _ n:Int) -> [String] {
-    return strings.sorted(by: {(first: String, second: String) -> Bool in
-        if first.map({$0})[n] != second.map({$0})[n] {
-            return first.map{$0}[n] < second.map{$0}[n]
-        } else { return first < second }
+    return strings.sorted(by: {
+        let firstN: Character = Array($0)[n]
+        let secondN: Character = Array($1)[n]
+        return firstN != secondN ? firstN < secondN : $0 < $1
     })
 }
