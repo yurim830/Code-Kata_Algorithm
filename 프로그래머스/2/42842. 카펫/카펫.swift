@@ -10,7 +10,7 @@ func solution(_ brown:Int, _ yellow:Int) -> [Int] {
     for i in yellowSquare {
         if (i.0 + i.1 + 2) * 2 == brown {
             return [i.0 + 2, i.1 + 2]
-        } else { continue }
+        }
     }
     return []
 }
