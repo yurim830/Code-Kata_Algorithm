@@ -10,9 +10,6 @@ func solution(_ answers:[Int]) -> [Int] {
     var point3 = 0
     
     for (i, answer) in answers.enumerated() {
-//        if person1[i % 5] == answer {
-//            point1  += 1
-//        }
         point1 = grade(person1, point: point1, index: i % 5, answer: answer)
         point2 = grade(person2, point: point2, index: i % 8, answer: answer)
         point3 = grade(person3, point: point3, index: i % 10, answer: answer)
@@ -37,8 +34,4 @@ func grade(_ person: [Int], point: Int, index: Int, answer: Int) -> Int {
         return point + 1
     }
     return point
-}
-
-func isMax(point: Int, maxPoint: Int) -> Bool {
-    point == maxPoint
 }
