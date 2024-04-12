@@ -14,12 +14,11 @@ func solution(_ X:String, _ Y:String) -> String {
     if mate.isEmpty {
         return "-1"
     }
-    if mate.range(of: #"^0+$"#, options: .regularExpression) != nil {
+    if mate.allSatisfy( { $0 == "0" }) {
         return "0"
     }
     return mate
 }
-
 
 func makeNumDict(_ num: String) -> [Int:Int] {
     var numDict: [Int:Int] = [:]
