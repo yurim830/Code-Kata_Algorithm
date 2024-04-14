@@ -6,7 +6,7 @@ func solution(_ X:String, _ Y:String) -> String {
     
     // mate 구하기
     var mate: String = ""
-    for i in stride(from: 9, to: -1, by: -1) { // 9부터 0까지
+    for i in stride(from: 9, through: 0, by: -1) { // 9부터 0까지
         mate += String(repeating: Character(String(i)), count: min(xDict[i]!, yDict[i]!))
     }
     
