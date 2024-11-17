@@ -1,28 +1,27 @@
 func doStack() {
     let numOfOrders = Int(readLine()!)!
     var stack: [Int] = []
-    var results: [String] = []
-
+    var result: [Int] = []
+    
     for _ in 0..<numOfOrders {
         let order = readLine()!
-        let parts = order.split(separator: " ")
-
-        if parts[0] == "1", 
-           let value = Int(parts[1]) {
-            stack.append(value)
+        let splitedOrder = order.split(separator: " ")
+        
+        if order.count != 1 {
+            stack.append(Int(String(splitedOrder[1]))!)
         } else if order == "2" {
             let item = stack.popLast() ?? -1
-            results.append(String(item))
+            result.append(item)
         } else if order == "3" {
-            results.append(String(stack.count))
+            result.append(stack.count)
         } else if order == "4" {
-            results.append(stack.isEmpty ? "1" : "0")
+            result.append(stack.isEmpty ? 1 : 0)
         } else if order == "5" {
-            results.append(String(stack.last ?? -1))
+            result.append(stack.last ?? -1)
         }
     }
-
-    results.forEach { print($0) }
+    
+    result.forEach { print($0) }
 }
 
 doStack()
