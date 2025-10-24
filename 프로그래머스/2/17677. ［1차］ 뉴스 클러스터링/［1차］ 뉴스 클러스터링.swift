@@ -32,7 +32,7 @@ func intersect(_ set1: Set<String>, _ set2: Set<String>) -> Set<String> {
 }
 
 func isAlphabet(_ str: String) -> Bool {
-    return str.range(of: "^[A-Za-z]+$", options: .regularExpression) != nil
+    return str.range(of: "^[A-Z]+$", options: .regularExpression) != nil
 }
 
 func configureCount(_ isUnion: Bool, _ arr1: [String], _ arr2: [String]) -> Int {
